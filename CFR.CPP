@@ -16,7 +16,7 @@ int nr_grup;
 };
 
 struct vagon{
-  int compartiment[10]={8,8,8,8,8,8,8,8,8,8}; ///10 compartimente a cate 8 locuri(trebuie initializat)
+  int compartiment[10]={8,8,8,8,8,8,8,8,8,8}; ///10 compartimente a cate 8 locuri
 };
 
 int cmp(const void *i, const void *j)
@@ -188,9 +188,8 @@ void coborare(vagon *tren, grup *v, int nr_grupuri, int s)
             vag= v[i].nr_vagon;
             comp=v[i].nr_compartiment;
             sizee=v[i].sizee;
-           /// cout<<tren[vag].compartiment[comp]<<"Comp\n";
             tren[vag].compartiment[comp]+=sizee;
-           /// cout<<tren[vag].compartiment[comp]<<"Comp\n";
+           
         }
     }
 
@@ -217,11 +216,10 @@ for(s=0;s<7;s++) ///statii
     alocare_la_urcare(tren,gr_v+(nr_gr-nr_grupuri_urca),nr_grupuri_urca, nr_gr);
 
 }
-   int sum=0;
+
    for(i=0;i<nr_gr;i++)
-    {   cout<<i<<" Dim. grup: "<<gr_v[i].sizee<<" Vagon si compar. "<<gr_v[i].nr_vagon<<" || "<<gr_v[i].nr_compartiment<<endl ;
-      ///  sum+=gr_v[i].sizee;
-    }
+     cout<<i<<" Dim. grup: "<<gr_v[i].sizee<<"\nVagon si compart.: "<<gr_v[i].nr_vagon<<" || "<<gr_v[i].nr_compartiment<<endl ;
+    
 
 
 return 0;
